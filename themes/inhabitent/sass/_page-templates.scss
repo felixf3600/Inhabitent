@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+
+/* Front page */
+.site-header {
+}
+.site-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+}
+
+.content-area {
+  grid-column: 1/2;
+  padding: 2rem;
+}
+
+.widget-area {
+  grid-column: 2/3;
+  padding: 2rem;
+}
+
+.site-main {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.post {
+  text-align: justify;
+}
