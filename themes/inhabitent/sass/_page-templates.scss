@@ -4,11 +4,19 @@
 
 /* Front page */
 .site-header {
+  width: 100%;
+  display: flex;
+  // working on this now header
+}
+
+.site {
+  display: flex;
+  justify-content: center;
 }
 .site-content {
-  width: 100%;
+  width: $width__max;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 5fr 2fr;
   grid-gap: 2rem;
 }
 

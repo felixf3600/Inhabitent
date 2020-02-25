@@ -29,7 +29,7 @@ add_filter( 'body_class', 'Inhabitent_starter_body_classes' );
 
 function new_custom_login_logo() {
 	echo '
-		<style> h1 a { background-image:url('.get_template_directory_uri().'/images/logos/inhabitent-logo-text-dark.svg) !important; height:70px !important; background-size: contain !important; width: 320px !important; }
+		<style> h1 a { background-image:url('.get_template_directory_uri().'/assets/logos/inhabitent-logo-text-dark.svg) !important; height:70px !important; background-size: contain !important; width: 320px !important; }
 	</style>' ;
 } 
 

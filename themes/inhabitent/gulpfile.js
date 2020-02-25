@@ -1,6 +1,6 @@
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
-const cssnano = require('gulp-cssnano');
+const cleancss = require('gulp-cleancss');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const prettyError = require('gulp-prettyerror');
@@ -24,7 +24,7 @@ gulp.task('sass', function() {
       })
     )
     .pipe(gulp.dest('./'))
-    .pipe(cssnano())
+    .pipe(cleancss())
     .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./build/css'));
