@@ -1,6 +1,6 @@
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
-const cleancss = require('gulp-cleancss');
+const cleancss = require('gulp-clean-css');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const prettyError = require('gulp-prettyerror');

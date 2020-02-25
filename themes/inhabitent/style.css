@@ -720,18 +720,21 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-header {
+  width: 100%; }
+
+.site {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-
-.site {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
 
 .site-content {
   width: 1120px;

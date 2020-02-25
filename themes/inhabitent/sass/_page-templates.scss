@@ -5,13 +5,14 @@
 /* Front page */
 .site-header {
   width: 100%;
-  display: flex;
-  // working on this now header
 }
 
 .site {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
 }
 .site-content {
   width: $width__max;
