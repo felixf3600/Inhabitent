@@ -4,15 +4,34 @@
 
 /* Front page */
 .site-header {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: $width__max;
+  justify-self: center;
+  height: 100px;
+  margin: 0 0 auto;
 }
-
+.site-branding {
+  background-image: url(../../assets/logos/inhabitent-logo-tent.svg);
+  width: 130px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+.main-navigation {
+  width: 700px;
+  height: 67px;
+}
 .site {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: space-around;
+  flex-direction: column;
+  // justify-content: space-around;
+  align-items: center;
+  // flex-wrap: wrap;
+  // margin: 0 0 auto;
 }
 .site-content {
   width: $width__max;
@@ -23,12 +42,12 @@
 
 .content-area {
   grid-column: 1/2;
-  padding: 2rem;
+  // padding: 2rem;
 }
 
 .widget-area {
   grid-column: 2/3;
-  padding: 2rem;
+  // padding: 2rem;
 }
 
 .site-main {
@@ -40,4 +59,7 @@
 
 .post {
   text-align: justify;
+}
+.site-footer {
+  width: 100%;
 }

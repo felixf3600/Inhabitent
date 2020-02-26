@@ -107,7 +107,13 @@ a {
     display: none;
   }
   .main-navigation ul {
-    display: block;
+    display: flex;
+    width: 600px;
+    height: 40px;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 

@@ -234,15 +234,15 @@ th {
 */
 @font-face {
   font-family: 'Merriweather Web';
-  src: url("../assets/fonts/merriweather-light-webfont.eot");
-  src: url("../assets/fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../assets/fonts/merriweather-light-webfont.woff") format("woff"), url("../assets/fonts/merriweather-light-webfont.ttf") format("truetype"), url("../assets/fonts/merriweather-light-webfont.svg#merriweatherlight") format("svg");
+  src: url("../../assets/fonts/merriweather-light-webfont.eot");
+  src: url("../../assets/fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-light-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-light-webfont.ttf") format("truetype"), url("../../assets/fonts/merriweather-light-webfont.svg#merriweatherlight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather Web';
-  src: url("../assets/fonts/merriweather-lightitalic-webfont.eot");
-  src: url("../assets/fonts/merriweather-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../assets/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../assets/fonts/merriweather-lightitalic-webfont.ttf") format("truetype"), url("../assets/fonts/merriweather-lightitalic-webfont.svg#merriweatherlight_italic") format("svg");
+  src: url("../../assets/fonts/merriweather-lightitalic-webfont.eot");
+  src: url("../../assets/fonts/merriweather-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../assets/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../assets/fonts/merriweather-lightitalic-webfont.ttf") format("truetype"), url("../../assets/fonts/merriweather-lightitalic-webfont.svg#merriweatherlight_italic") format("svg");
   font-weight: normal;
   font-style: italic; }
 
@@ -289,14 +289,22 @@ textarea {
   line-height: 1.75; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both; }
 
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic; }
 
 blockquote {
@@ -316,21 +324,29 @@ pre {
   overflow: auto;
   padding: 1.6rem; }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem; }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help; }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none; }
 
 big {
   font-size: 125%; }
+
+a {
+  font-size: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -525,7 +541,21 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 600px;
+    height: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    justify-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -720,10 +750,6 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-header {
-  width: 100%; }
-
-.site {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -731,10 +757,38 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1120px;
+  justify-self: center;
+  height: 100px;
+  margin: 0 0 auto; }
+
+.site-branding {
+  background-image: url(../../assets/logos/inhabitent-logo-tent.svg);
+  width: 130px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right; }
+
+.main-navigation {
+  width: 700px;
+  height: 67px; }
+
+.site {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .site-content {
   width: 1120px;
@@ -743,12 +797,10 @@ object {
   grid-gap: 2rem; }
 
 .content-area {
-  grid-column: 1/2;
-  padding: 2rem; }
+  grid-column: 1/2; }
 
 .widget-area {
-  grid-column: 2/3;
-  padding: 2rem; }
+  grid-column: 2/3; }
 
 .site-main {
   display: -webkit-box;
@@ -765,3 +817,6 @@ object {
 
 .post {
   text-align: justify; }
+
+.site-footer {
+  width: 100%; }

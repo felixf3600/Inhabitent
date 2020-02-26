@@ -22,6 +22,10 @@ function Inhabitent_starter_body_classes( $classes ) {
 		$classes[] = 'page-' . $post->post_name;
 	}
 
+	if ( is_page('about') ) {
+		$classes[] = 'page-about';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'Inhabitent_starter_body_classes' );

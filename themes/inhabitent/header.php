@@ -33,4 +33,3 @@
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
-			<i class="fab fa-accessible-icon"></i>
