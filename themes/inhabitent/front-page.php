@@ -21,18 +21,41 @@ if (is_page('page-about')|| is_front_page()) {
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<h2>SHOP STUFF</h2>
+			<div class="loop-containers">
+				<div class="single-container shop">
+					<img src="<?php echo get_template_directory_uri();?>/assets/logos/do.svg">
+					<p>Get back to nature with all the tools and toys you need to enj.oy the great outdoors.</p>
+					<button type="buton">DO STUFF</button>
+				</div>
+				<div class="single-container shop">
+				<img src="<?php echo get_template_directory_uri();?>/assets/logos/eat.svg">
+					<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
+					<button type="buton">EAT STUFF</button>
+				</div>
+				<div class="single-container shop">
+				<img src="<?php echo get_template_directory_uri();?>/assets/logos/sleep.svg">
+					<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
+					<button type="buton">SLEEP STUFF</button>
+				</div>
+				<div class="single-container shop">
+				<img src="<?php echo get_template_directory_uri();?>/assets/logos/wear.svg">
+					<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
+					<button type="buton">WEAR STUFF</button>
+				</div>
+ 			</div>
+			<h2>INHABITENT JOURNAL</h2>
 			<?php
-			   $args = array( 
+			   $journal_args = array( 
 				 'numberposts' => '3'
 			);
-   			$product_posts = get_posts( $args ); // returns an array of posts
+   			$journal_posts = get_posts( $journal_args ); // returns an array of posts
 			?>
- 
-			<h2>INHABITENT JOURNAL</h2>;
+
 			<div class="loop-containers">
 			<?php 
-			foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-				<div class= "single-container">
+			foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+				<div class= "single-container journal">
 					<?php /* Content from your array of post results goes here */ ?>
 					<?php the_post_thumbnail();the_date();get_default_comment_status(); ?>
 					<h3> <?php the_title(); ?> </h3>
@@ -43,12 +66,6 @@ if (is_page('page-about')|| is_front_page()) {
 			<?php endforeach; wp_reset_postdata(); ?>
 			</div>
 		
-			
-			<?php// while ( have_posts() ) : the_post(); ?>
-				<?php// get_template_part( 'template-parts/content', 'page' ); ?>
-
-			<?php// endwhile; // End of the loop. ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

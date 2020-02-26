@@ -8,7 +8,7 @@
 get_header(); ?>
 <div class="banner-image">
 <?php
-	the_post_thumbnail('full');
+	the_post_thumbnail('full')
 ?>
 </div>
 
