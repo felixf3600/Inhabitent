@@ -108,15 +108,18 @@ a {
   }
   .main-navigation ul {
     display: flex;
-    width: 600px;
-    height: 40px;
+    width: 400px;
+    height: 37px;
     flex-direction: row;
     justify-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    li,
+    a {
+      font-size: $font__base-size;
+    }
   }
 }
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

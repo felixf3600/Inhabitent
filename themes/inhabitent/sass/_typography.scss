@@ -11,6 +11,7 @@ textarea {
   font-family: $font__main;
   @include font-size(1);
   line-height: $font__line-height-body;
+  background-color: $color__background-body;
 }
 
 /* Headings */
@@ -22,12 +23,16 @@ h4,
 h5,
 h6 {
   clear: both;
+  font-family: $font__accent;
+  color: $color__text-main;
 }
 
 /* Copy */
 
 p {
   margin-bottom: $base__space-unit;
+  font-family: font__main;
+  color: $color__text-main;
 }
 
 dfn,
@@ -81,4 +86,16 @@ big {
 }
 a {
   font-size: 1.5rem;
+}
+.site-footer {
+  h1,
+  h2,
+  h3 {
+    color: $color__orange-brand;
+  }
+  a,
+  p,
+  span {
+    color: $color__background-body;
+  }
 }
