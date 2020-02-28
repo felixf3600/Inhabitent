@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.footer-container {
+.widget-area-footer {
   display: flex;
   width: $width__max;
   flex-direction: row;
@@ -25,25 +25,32 @@
   }
 }
 
-.contact-info {
+.contact-info-widget-class {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  width: $width__max/4;
+  min-width: $width__max/4 !important;
 }
 
-.business-hours {
+.business-hours-widget-class {
   display: flex;
   flex-direction: column;
-  width: $width__max/2;
+  min-width: $width__max/2 !important;
   margin-top: 2rem;
 }
 .footer-logo {
   margin-top: 3rem;
   display: flex;
-  width: $width__max/4;
+  min-width: $width__max/4 !important;
   z-index: 3;
   background-image: url(../../assets/logos/inhabitent-logo-text.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+#contact-info-widget-3 {
+  width: $width__max/4;
+}
+#business-hours-widget-4 {
+  width: $width__max/2;
 }

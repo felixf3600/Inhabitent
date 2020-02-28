@@ -351,7 +351,7 @@ big {
   font-size: 125%; }
 
 a {
-  font-size: 1.5rem; }
+  font-size: 1rem; }
 
 .site-footer h1,
 .site-footer h2,
@@ -947,7 +947,7 @@ object {
       -ms-flex-align: center;
           align-items: center; }
 
-.footer-container {
+.widget-area-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -958,11 +958,11 @@ object {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .footer-container .copyright {
+  .widget-area-footer .copyright {
     width: 1120px;
     text-align: center; }
 
-.contact-info {
+.contact-info-widget-class {
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,9 +971,9 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 280px; }
+  min-width: 280px !important; }
 
-.business-hours {
+.business-hours-widget-class {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -981,7 +981,7 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 560px;
+  min-width: 560px !important;
   margin-top: 2rem; }
 
 .footer-logo {
@@ -989,8 +989,14 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 280px;
+  min-width: 280px !important;
   z-index: 3;
   background-image: url(../../assets/logos/inhabitent-logo-text.svg);
   background-repeat: no-repeat;
   background-size: contain; }
+
+#contact-info-widget-3 {
+  width: 280px; }
+
+#business-hours-widget-4 {
+  width: 560px; }
