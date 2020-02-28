@@ -7,13 +7,21 @@
 
 get_header(); ?>
 <div class="banner-image">
-<?php
-	the_post_thumbnail('full')
-?>
+<?php // check if the pafe is about page and has image
+// if (is_page('page-about')):
+// 	if ( has_post_thumbnail() ) :
+	// adds thumbnail url to class
+	the_post_thumbnail('full');
+// 	endif;
+// endif;
+?>	
+</div>
+<div class = "inner-logo">
+	<h1>ABOUT</h1>
 </div>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main page-about" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

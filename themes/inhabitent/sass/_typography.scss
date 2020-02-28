@@ -99,3 +99,27 @@ a {
     color: $color__background-body;
   }
 }
+.page-about {
+  h1 {
+    color: $color__background-body;
+  }
+}
+.main-navigation {
+  a {
+    font-size: $font__base-size;
+    color: $color__green-brand;
+  }
+}
+.page-about {
+  .inner-logo {
+    h1 {
+      color: $color__background-body;
+      font-size: 3rem;
+    }
+  }
+  .entry-title {
+    h2 {
+      // font-size: 3rem;
+    }
+  }
+}

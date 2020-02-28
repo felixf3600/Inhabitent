@@ -8,19 +8,20 @@
 get_header(); ?>
 <div class="banner-image">
 
-<?php // check if the pafe is about or front page
-if (is_page('page-about')|| is_front_page()) { 
+<?php // check if the pafe is front page and has image
+if (is_front_page()) { 
 	if ( has_post_thumbnail() ) {
 	// adds thumbnail url to class
 	the_post_thumbnail('full');
 }}
 ?>	
+</div>
 <div class = "inner-logo">
 </div>
-</div>
+
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main front-page" role="main">
 			<h2>SHOP STUFF</h2>
 			<div class="loop-containers">
 				<div class="single-container shop">
