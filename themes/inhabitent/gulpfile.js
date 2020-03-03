@@ -30,7 +30,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('lint', function() {
+gulp.task('eslint', function() {
   return gulp
     .src(['./js/*.js'])
     .pipe(prettyError())
@@ -41,7 +41,7 @@ gulp.task('lint', function() {
 
 gulp.task(
   'scripts',
-  gulp.series('lint', function compileScripts() {
+  gulp.series('eslint', function compileScripts() {
     return gulp
       .src('./js/*.js')
       .pipe(

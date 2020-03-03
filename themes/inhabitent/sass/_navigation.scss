@@ -108,8 +108,8 @@ a {
   }
   .main-navigation ul {
     display: flex;
-    width: 400px;
-    height: 37px;
+    width: 600px;
+    height: 55px;
     flex-direction: row;
     justify-items: center;
     justify-content: space-between;
@@ -134,4 +134,10 @@ a {
     text-align: right;
     width: 50%;
   }
+}
+.condense-search {
+  display: none;
+}
+.search-form {
+  border: none;
 }

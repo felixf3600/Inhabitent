@@ -20,20 +20,24 @@
   // height: 200px;
   margin: 0 0 auto;
 }
-.site-branding {
+.site-branding-logo {
+  margin-top: 10px;
   background-image: url(../../assets/logos/inhabitent-logo-tent.svg);
   width: 65px;
   height: 37px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  opacity: 1;
   z-index: 3;
 }
 
 .main-navigation {
-  width: 400px;
-  height: 37px;
+  width: 600px;
+  height: 55px;
+  button {
+    &:focus {
+    }
+  }
 }
 .site {
   width: 100%;
@@ -42,7 +46,6 @@
   align-items: center;
 }
 .site-content {
-  // margin-top: 75px;
   width: $width__max;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -50,12 +53,27 @@
 }
 .content-area {
   grid-column: 1/3;
-  // padding: 2rem;
+  padding: 2rem;
+}
+.shop-search-bar {
+  padding-bottom: 50px;
+  border-bottom: $border__dashed;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .shop-categories {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+  }
 }
 
 .widget-area {
   grid-column: 3/4;
-  // padding: 2rem;
+  border-left: $border__solid;
+
+  padding-left: 2rem;
 }
 .page-about {
   .inner-logo {
@@ -68,7 +86,8 @@
     }
   }
 }
-.home {
+.home,
+.archive {
   .inner-logo {
     height: 300px;
     width: 300px;
@@ -84,14 +103,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 50px;
   }
   .single-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
+    justify-content: space-between;
+
     border: $border__solid;
     img {
-      object-fit: contain;
+      width: 272px;
+      object-fit: cover;
+    }
+    .button {
+      margin: 10px;
+      &:hover {
+        background-color: $color__green-brand;
+        color: $color__background-body;
+      }
     }
   }
   .journal {
@@ -110,6 +140,16 @@
       object-fit: contain;
       margin: 0 0 auto;
     }
+    .green-button {
+      &:hover {
+        filter: brightness(80%);
+      }
+    }
+  }
+  .product-shop {
+    img {
+      height: 200px;
+    }
   }
 }
 .home,
@@ -121,8 +161,17 @@
     left: 50%;
     top: 100vw * 0.7/2;
   }
-  .site-branding {
-    background-image: url(../../assets/logos/inhabitent-logo-tent-white.svg);
+  .site-banner {
+    a {
+      display: flex;
+      .site-branding-logo {
+        background-image: url(../../assets/logos/inhabitent-logo-tent-white.svg);
+        z-index: 5;
+      }
+    }
+  }
+  .shop {
+    align-items: center;
   }
 
   .content-area {
@@ -163,8 +212,17 @@
 .post {
   text-align: justify;
 }
+.tax-product_taxonomy {
+  .content-area {
+    grid-column: 1/4;
+  }
+  .widget-area {
+    display: none;
+  }
+}
 
-.home {
+.home,
+.single {
   img {
     // width: ($width__max/3 * 2)-20px;
     object-fit: cover;
@@ -193,6 +251,7 @@
     top: 20px;
     left: 0;
     width: 600px;
+    color: $color__background-body;
 
     background-color: $color__green-brand;
     a {
@@ -202,6 +261,17 @@
       text-transform: uppercase;
       line-height: normal;
       text-align: left;
+    }
+    // .span {
+    //   a {
+    //     color: $color__background-body;
+    //   }
+    // }
+  }
+
+  .single {
+    .nav-links {
+      display: none;
     }
   }
   .entry-meta {
@@ -220,5 +290,72 @@
       line-height: normal;
       text-align: right;
     }
+  }
+}
+
+.green-button {
+  background-color: $color__green-brand;
+  color: $color__background-body;
+}
+.search-field {
+  transition: 2s;
+  display: inline-block;
+}
+.display {
+  transition: 2s;
+  display: none;
+}
+
+.search-button {
+  width: 65px;
+  height: 37px;
+  transition: 2s;
+}
+
+.single-product_type {
+  display: flex;
+  .content-area {
+    display: flex;
+    .site-main {
+      .entry-header {
+        display: flex;
+        justify-content: left;
+        width: $width__max;
+
+        img {
+          width: $width__max/2;
+          object-fit: contain;
+        }
+
+        .entry-title {
+          display: flex;
+          top: 0;
+          left: 0;
+          padding-left: 20px;
+          margin-top: 0;
+          color: $color__orange-brand;
+          background-color: $color__background-body;
+          position: relative;
+          height: 20px;
+        }
+        .entry-meta {
+          display: none;
+        }
+        .entry-content {
+          width: $width__max/2;
+          padding-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .widget-area {
+    display: none;
+  }
+}
+.single-post {
+  .post-navigation {
+    display: none;
   }
 }

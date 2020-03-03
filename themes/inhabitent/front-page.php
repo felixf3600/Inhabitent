@@ -26,23 +26,23 @@ if (is_front_page()) {
 			<div class="loop-containers">
 				<div class="single-container shop">
 					<img src="<?php echo get_template_directory_uri();?>/assets/logos/do.svg">
-					<p>Get back to nature with all the tools and toys you need to enj.oy the great outdoors.</p>
-					<button type="buton">DO STUFF</button>
+					<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors. </p>
+					<a href="<?php echo get_site_url();?>/product_taxonomy/do/"><button type="button" class="green-button">DO STUFF</button></a>
 				</div>
 				<div class="single-container shop">
 				<img src="<?php echo get_template_directory_uri();?>/assets/logos/eat.svg">
 					<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
-					<button type="buton">EAT STUFF</button>
+					<a href="<?php echo get_site_url();?>/product_taxonomy/eat/"><button type="button"class= "green-button">EAT STUFF</button></a>
 				</div>
 				<div class="single-container shop">
 				<img src="<?php echo get_template_directory_uri();?>/assets/logos/sleep.svg">
-					<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
-					<button type="buton">SLEEP STUFF</button>
+					<p>Get a good night's rest in the wild in a home away from home that travels well. </p>
+					<a href="<?php echo get_site_url();?>/product_taxonomy/sleep/"><button type="button" class="green-button">SLEEP STUFF</button></a>
 				</div>
 				<div class="single-container shop">
 				<img src="<?php echo get_template_directory_uri();?>/assets/logos/wear.svg">
 					<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
-					<button type="buton">WEAR STUFF</button>
+					<a href="<?php echo get_site_url();?>/product_taxonomy/wear/"><button type="button" class="green-button">WEAR STUFF</button></a>
 				</div>
  			</div>
 			<h2>INHABITENT JOURNAL</h2>
@@ -59,9 +59,9 @@ if (is_front_page()) {
 				<div class= "single-container journal">
 					<?php /* Content from your array of post results goes here */ ?>
 					<?php the_post_thumbnail();the_date();get_default_comment_status(); ?>
-					<h3> <?php the_title(); ?> </h3>
+					<h2> <?php the_title(); ?> </h2>
 					<a href= "<?php the_permalink(); ?>">				
-					<botton	type="button">Read Entry</button>
+					<button	type="button" class="button">Read Entry</button>
 					</a>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>

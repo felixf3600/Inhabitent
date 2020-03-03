@@ -13,20 +13,29 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+				 <h2> <?php single_term_title(); ?> </h2>;
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+					<div class="loop-containers">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
-			<?php endwhile; ?>
+				<div class= "single-container product-shop">
+						<?php /* Content from your array of post results goes here */ ?>
+						<?php 
+						$term = get_field('price');
+						?>
+					 
+						<a href=" <?php the_permalink() ?> "><img src="<?php the_field('featured_image');?>"/></a>
+						<h3> <?php the_title(); echo "...........".$term?> </h3>
+				
+						</a>
+				</div>
+				<?php endwhile; ?>
+				</div>
 
 			<?php the_posts_navigation(); ?>
 
