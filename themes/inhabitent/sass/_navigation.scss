@@ -135,9 +135,15 @@ a {
     width: 50%;
   }
 }
-.condense-search {
-  display: none;
-}
-.search-form {
-  border: none;
+
+.main-navigation {
+  .search-form {
+    border: none;
+    a {
+      align-items: center;
+      &:visited {
+        color: $color__green-brand !important;
+      }
+    }
+  }
 }

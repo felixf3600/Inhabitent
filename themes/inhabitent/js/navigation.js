@@ -6,7 +6,15 @@
  */
 
 (function() {
-  let container, button, menu, links, i, len, searchButton, searchField;
+  let container,
+    searchLabel,
+    button,
+    menu,
+    links,
+    i,
+    len,
+    searchButton,
+    searchField;
 
   container = document.getElementById('site-navigation');
   if (!container) {
@@ -19,9 +27,12 @@
   }
   searchField = document.getElementById('search-field');
   searchButton = document.getElementById('search-button');
+  searchLabel = document.getElementById('search-label');
 
-  searchButton.onclick = function() {
+  searchButton.onclick = function(event) {
+    event.preventDefault();
     searchField.classList.toggle('display');
+    searchLabel.classList.toggle('display');
   };
 
   menu = container.getElementsByTagName('ul')[0];

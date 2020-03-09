@@ -25,5 +25,5 @@
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
-	<button><a href="get_permalink()"> READ MORE -></a>
+	<a class="submit-button" href="<?php  esc_url(the_permalink());?>"> READ MORE -></a>
 </article><!-- #post-## -->
