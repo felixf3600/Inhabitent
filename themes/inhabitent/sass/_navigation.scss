@@ -135,7 +135,18 @@ a {
     width: 50%;
   }
 }
-
+.page-front-page {
+  li {
+    a {
+      i {
+        color: $color__background-body !important;
+        &:visited {
+          color: $color__background-body !important;
+        }
+      }
+    }
+  }
+}
 .main-navigation {
   .search-form {
     border: none;

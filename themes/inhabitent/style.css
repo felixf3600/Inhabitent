@@ -607,6 +607,11 @@ a {
   text-align: right;
   width: 50%; }
 
+.page-front-page li a i {
+  color: #fff !important; }
+  .page-front-page li a i:visited {
+    color: #fff !important; }
+
 .main-navigation .search-form {
   border: none; }
   .main-navigation .search-form a {
